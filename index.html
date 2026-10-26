@@ -3,115 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Origin Pure Water</title>
+<title>ORIGIN Pure Water</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:Arial,sans-serif;
-  background:#f4fbff;
-  color:#123;
+font-family:Arial,sans-serif;
+background:#05070b;
+color:white;
 }
-
 header{
-  background:linear-gradient(135deg,#0077b6,#00b4d8);
-  color:white;
-  padding:20px;
-  text-align:center;
+position:sticky;top:0;z-index:10;
+background:#05070bcc;
+backdrop-filter:blur(12px);
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
+.logo{font-size:22px;font-weight:bold;color:#fff}
+.logo span{color:#20a9ff}
+nav a{
+color:#ddd;text-decoration:none;margin-left:12px;font-size:13px
 }
-
 .hero{
-  min-height:500px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-  background:linear-gradient(180deg,#dff8ff,#ffffff);
+min-height:560px;
+padding:90px 25px 60px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,#05070b 5%,#05070bcc 45%,transparent),
+linear-gradient(0deg,#05070b 2%,transparent 50%),
+radial-gradient(circle at 75% 35%,#087bc955,#05070b 55%);
 }
-
 .hero h1{
-  font-size:42px;
-  color:#006494;
-  margin-bottom:15px;
+font-size:48px;
+line-height:1.05;
+max-width:500px;
+margin-bottom:18px;
 }
-
+.hero h1 span{color:#20a9ff}
 .hero p{
-  font-size:20px;
-  margin-bottom:25px;
+color:#b8c4d0;
+font-size:17px;
+max-width:430px;
+margin-bottom:25px;
 }
-
 .btn{
-  display:inline-block;
-  padding:14px 24px;
-  margin:6px;
-  border-radius:30px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  background:#0077b6;
+display:inline-block;
+padding:14px 22px;
+border-radius:30px;
+background:#1597ed;
+color:white;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
 }
-
-.whatsapp{
-  background:#25D366;
+.whatsapp{background:#19b957}
+section{padding:45px 20px}
+.title{
+font-size:28px;
+margin-bottom:20px;
 }
-
-section{
-  padding:50px 20px;
-  text-align:center;
+.row{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding-bottom:15px;
 }
-
-section h2{
-  color:#006494;
-  font-size:30px;
-  margin-bottom:20px;
-}
-
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-}
-
 .card{
-  background:white;
-  width:280px;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
+min-width:210px;
+background:#111722;
+border:1px solid #263342;
+border-radius:16px;
+padding:20px;
 }
-
-.card h3{
-  color:#0077b6;
-  margin-bottom:10px;
+.card .icon{
+height:150px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:75px;
+background:linear-gradient(145deg,#082d49,#071019);
+border-radius:12px;
+margin-bottom:15px;
 }
-
+.card h3{margin-bottom:8px}
+.card p{color:#9eabb8;font-size:14px}
+.order{
+display:block;
+text-align:center;
+margin-top:15px;
+background:#1597ed;
+padding:10px;
+border-radius:22px;
+color:white;
+text-decoration:none;
+}
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+.feature{
+background:#101620;
+padding:20px 10px;
+text-align:center;
+border-radius:14px;
+}
+.feature b{display:block;margin-top:8px}
 .contact{
-  background:#e0f7ff;
+background:linear-gradient(135deg,#071a29,#05070b);
+text-align:center;
 }
-
+.contact p{color:#b7c3ce;margin:10px}
 footer{
-  background:#023047;
-  color:white;
-  text-align:center;
-  padding:20px;
+padding:25px;
+text-align:center;
+color:#77828d;
+font-size:13px;
+border-top:1px solid #1b2630;
 }
-
 @media(max-width:600px){
-  .hero h1{
-    font-size:34px;
-  }
+.hero h1{font-size:40px}
+nav a{display:none}
+.features{grid-template-columns:1fr 1fr 1fr}
 }
 </style>
 </head>
@@ -119,78 +135,76 @@ footer{
 <body>
 
 <header>
-  <div class="logo">💧 ORIGIN PURE WATER</div>
-  <p>Pure Water • Trusted Quality</p>
+<div class="logo">💧 ORIGIN <span>PURE WATER</span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="hero">
-  <div>
-    <h1>Pure Water, Pure Life</h1>
-    <p>Clean and refreshing drinking water for your needs.</p>
+<section class="hero" id="home">
+<div>
+<h1>Pure Water.<br><span>Better Life.</span></h1>
+<p>Clean, fresh and trusted drinking water for your home and business.</p>
 
-    <a class="btn" href="tel:03256100090">📞 Call Now</a>
+<a class="btn" href="#products">Explore Products</a>
+<a class="btn whatsapp" href="https://wa.me/923256100090" target="_blank">
+WhatsApp
+</a>
+</div>
+</section>
 
-    <a class="btn whatsapp"
-       href="https://wa.me/923256100090"
-       target="_blank">
-       💬 WhatsApp
-    </a>
-  </div>
+<section id="products">
+<h2 class="title">Our Products</h2>
+
+<div class="row">
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>500 ml</h3>
+<p>Perfect for daily use and travel.</p>
+<a class="order" href="https://wa.me/923256100090?text=I%20want%20to%20order%20500ml%20Origin%20Pure%20Water" target="_blank">Order Now</a>
+</div>
+
+<div class="card">
+<div class="icon">🧴</div>
+<h3>1.5 L</h3>
+<p>Refreshing water for home and family.</p>
+<a class="order" href="https://wa.me/923256100090?text=I%20want%20to%20order%201.5L%20Origin%20Pure%20Water" target="_blank">Order Now</a>
+</div>
+
+<div class="card">
+<div class="icon">🚰</div>
+<h3>19 L</h3>
+<p>Ideal for homes, offices and businesses.</p>
+<a class="order" href="https://wa.me/923256100090?text=I%20want%20to%20order%2019L%20Origin%20Pure%20Water" target="_blank">Order Now</a>
+</div>
+
+</div>
 </section>
 
 <section>
-  <h2>About Origin Pure Water</h2>
-  <p>
-    Welcome to Origin Pure Water.
-    We are committed to providing clean,
-    fresh and quality drinking water.
-  </p>
+<h2 class="title">Why Choose Origin?</h2>
+
+<div class="features">
+<div class="feature">💧<b>Pure & Safe</b></div>
+<div class="feature">⭐<b>Best Quality</b></div>
+<div class="feature">❤️<b>Healthy Life</b></div>
+</div>
 </section>
 
-<section>
-  <h2>Our Services</h2>
+<section class="contact" id="contact">
+<h2 class="title">Order Your Water</h2>
+<p>Home Delivery • Business Supply</p>
+<p>📞 0325 6100090</p>
 
-  <div class="cards">
-
-    <div class="card">
-      <h3>💧 Pure Drinking Water</h3>
-      <p>Fresh and quality drinking water.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏠 Home Delivery</h3>
-      <p>Convenient water delivery for your needs.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏢 Business Supply</h3>
-      <p>Water supply solutions for businesses.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="contact">
-  <h2>Contact Us</h2>
-
-  <p><strong>ORIGIN PURE WATER</strong></p>
-  <p>📞 03256100090</p>
-
-  <br>
-
-  <a class="btn" href="tel:03256100090">
-    Call Us
-  </a>
-
-  <a class="btn whatsapp"
-     href="https://wa.me/923256100090"
-     target="_blank">
-     WhatsApp
-  </a>
+<a class="btn" href="tel:03256100090">Call Now</a>
+<a class="btn whatsapp" href="https://wa.me/923256100090" target="_blank">WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 Origin Pure Water. All Rights Reserved.
+© 2026 ORIGIN Pure Water • All Rights Reserved
 </footer>
 
 </body>
